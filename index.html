@@ -1,25 +1,35 @@
-<!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Seja bem vindo a nossa loja virtual</title>
-<link rel="stylesheet" href="atyle.css">
+<title>Minha Loja</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<h1>Studios Player</h1>
+<header>
+<h1>Minha Loja Online</h1>
+</header>
 
-<main class="produto-container"
-<div class="produto-card" data-name="Tênis Nike"
-<img src="https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSEOsnjGPeiK5VxNRF2vbLRjDbk4Gkmsaois1XGzUGIsMWxGOW_rADkpsFuhPuVFFARbAl7TG3hRzAgxwuYwnj2d7oaQ12GFGVK0TNRfvae5_f-QeP1OoBR.jpg"
-<p> R$499,00</p>
+<div class="container">
+<input type="text" id="search" class="search" placeholder="Buscar produto..." onkeyup="buscar()">
 
-<button onclick="adicionarCarrinho()">Adicionar no Carrinho</button>
-<button onclick="verCarrinho()">Ver Carrinho</button>
-<script src="script.js"></script>
+<div class="grid" id="produtos"></div>
 </div>
-</main>
 
+<div class="cart">
+<h3>Carrinho</h3>
+<ul id="carrinho"></ul>
+<p>Total: R$ <span id="total">0</span></p>
+<select id="pagamento">
+<option>Pix</option>
+<option>Cartão</option>
+<option>Boleto</option>
+</select>
+<br><br>
+<button onclick="finalizarCompra()">Finalizar Compra</button>
+</div>
+
+<script src="script.js"></script>
 </body>
 </html>
