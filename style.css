@@ -1,0 +1,16 @@
+body{
+    margin:0;
+    padding:20px;
+    font-family:Arial;
+}
+
+
+.produto{
+    width:300px;
+    margin:auto;
+    text-align:center;
+}
+
+img{
+    max-width: 100%;
+}
