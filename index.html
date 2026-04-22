@@ -1,33 +1,35 @@
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Minha Loja</title>
+<title>Minha Loja Profissional</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-<h1>Minha Loja Online</h1>
+<header class="topo">
+  <h1>🛍️ Minha Loja</h1>
 </header>
 
 <div class="container">
-<input type="text" id="search" class="search" placeholder="Buscar produto..." onkeyup="buscar()">
+  <input type="text" id="search" class="search" placeholder="Buscar produto..." onkeyup="buscar()">
 
-<div class="grid" id="produtos"></div>
+  <div class="grid" id="produtos"></div>
 </div>
 
 <div class="cart">
-<h3>Carrinho</h3>
-<ul id="carrinho"></ul>
-<p>Total: R$ <span id="total">0</span></p>
-<select id="pagamento">
-<option>Pix</option>
-<option>Cartão</option>
-<option>Boleto</option>
-</select>
-<br><br>
-<button onclick="finalizarCompra()">Finalizar Compra</button>
+  <h3>🛒 Carrinho</h3>
+  <ul id="carrinho"></ul>
+  <p><strong>Total: R$ <span id="total">0</span></strong></p>
+
+  <select id="pagamento">
+    <option>Pix</option>
+    <option>Cartão</option>
+    <option>Boleto</option>
+  </select>
+
+  <button class="btn-finalizar" onclick="finalizarCompra()">Finalizar</button>
 </div>
 
 <script src="script.js"></script>

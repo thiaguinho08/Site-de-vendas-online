@@ -1,4 +1,23 @@
 let carrinho = [];
+
+let produtos = [
+  {
+    nome: "Tênis Esportivo",
+    preco: 199.90,
+    imagem: "imagens/tenis.jpg"
+  },
+  {
+    nome: "Camiseta Básica",
+    preco: 49.90,
+    imagem: "imagens/camiseta.jpg"
+  },
+  {
+    nome: "Relógio Moderno",
+    preco: 129.90,
+    imagem: "imagens/relogio.jpg"
+  }
+];
+
 while (produtos.length < 100) {
   let base = produtos[produtos.length % 3];
   produtos.push({
@@ -13,10 +32,10 @@ function renderProdutos(lista) {
   lista.forEach(p => {
     html += `
     <div class="product">
-      <img src="${p.imagem}" alt="${p.nome}">
+      <img src="${p.imagem}">
       <h4>${p.nome}</h4>
       <p>R$ ${p.preco}</p>
-      <button onclick="addCarrinho('${p.nome}', ${p.preco})">Adicionar</button>
+      <button onclick="addCarrinho('${p.nome}', ${p.preco})">Adicionar ao carrinho</button>
     </div>`;
   });
   document.getElementById("produtos").innerHTML = html;
@@ -50,8 +69,6 @@ function buscar() {
 
 function finalizarCompra() {
   let metodo = document.getElementById("pagamento").value;
-
-  // 🔴 TROQUE PELO SEU NÚMERO
   let link = "https://wa.me/5516999999999";
 
   alert("Pagamento via " + metodo + ". Redirecionando...");
