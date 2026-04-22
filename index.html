@@ -1,43 +1,117 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Minha Loja Profissional</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiago Store</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header class="header">
+        <div class="logo">Thiago Store</div>
+        <input type="text" id="search-bar" placeholder="Busque um produto..." oninput="searchProducts()">
+    </header>
 
-<header class="topo">
-  <h1>🛍️ Minha Loja</h1>
-</header>
+    <main class="product-container">
+        <div class="product-card" data-name="Livro de Leitura">
+            <img src= "https://img.freepik.com/vetores-premium/conceito-de-biblioteca-de-leitura-para-amantes-de-livros_88465-2435.jpg"
+            <h2>Livro de Leitura</h2>
+            <p>R$ 199,99</p>
+            <p>Frete: R$ 10,00</p>
+            <button>Comprar</button>
+        
 
-<div class="container">
-  <input type="text" id="search" class="search" placeholder="Buscar produto..." onkeyup="buscar()">
+        </p>  
 
-  <div class="grid" id="produtos"></div>
-</div>
+        </div>
+        <div class="product-card" data-name=">Tênis casual">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_wkAaPGMcvPVdiXyQHiMmyMvECEkMcZjX7A&s"
+            <h2>Tênis casual</h2>
+            <p>R$ 332,49</p>
+            <p>Frete: R$ 12,00</p>
+            <button>Comprar</button>
 
-<div class="cart">
-  <h3>🛒 Carrinho</h3>
-  <ul id="carrinho"></ul>
-  <p><strong>Total: R$ <span id="total">0</span></strong></p>
+        </p>
 
-  {
-    nome: "Tênis Esportivo",
-    preco: 199.90,
-    imagem: "https://img.freepik.com/vetores-premium/conceito-de-biblioteca-de-leitura-para-amantes-de-livros_88465-2435.jpg"
-  }
+        </div>
+        <div class="product-card" data-name="Video-Game">
+            <img src="https://wx.mlcdn.com.br/ponzi/production/portaldalu/12278_01.jpg"
+            <h2>Video-Game</h2>
+            <p>R$ 3.298,69</p>
+            <p>Frete: R$ 8,00</p>
+            <button>Comprar</button>
 
-  <select id="pagamento">
-    <option>Pix</option>
-    <option>Cartão</option>
-    <option>Boleto</option>
-  </select>
+        </p>
+        
 
-  <button class="btn-finalizar" onclick="finalizarCompra()">Finalizar</button>
-</div>
+        </div>
+        <div class="product-card" data-name="Smart">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM7MiUPgwLQejE_fPYMwIqdNPwThOzVOVWwg&s"
+            <h2>Smart</h2>
+            <p>R$ 7.019,10</p>
+            <p>Frete: R$ 15,00</p>
+            <button>Comprar</button>
 
-<script src="script.js"></script>
+        </p>
+        
+
+        </div>
+        <div class="product-card" data-name="Relogio">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSa1imqDmTzoCANXPzuB5iHPEolI0Jc_4F6-A&s"
+            <h2>Relogio</h2>
+            <p>R$ 4.965,27</p>
+            <p>Frete: R$ 20,00</p>
+            <button>Comprar</button>
+
+        </p>
+
+        </div>
+        <div class="product-card" data-name="Caixa de Som">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKoj4jqbRINi29_6TBRhI6raFWLfhGXvkJnQ&s"
+            <h2>Caixa de Som</h2>
+            <p>R$ 1.288,00</p>
+            <p>Frete: R$ 10,00</p>
+            <button>Comprar</button>
+
+        </p>
+
+        </div>
+        <div class="product-card" data-name="Juliet">
+            <img src="https://acdn.mitiendanube.com/stores/003/987/020/products/img_9297-ae8d3be43a2f82816b17201463558778-1024-1024.png"
+            <h2>Juliet</h2>
+            <p>R$ 656,92</p>
+            <p>Frete: R$ 25,00</p>
+            <button>Comprar</button>
+        </p>
+
+        </div>
+        <div class="product-card" data-name="Samsung">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrtIg93TzX_oBX3tLh2ljLdsds09i77CppPw&s"
+            <h2>Samsung</h2>
+            <p>R$ 9.459,99</p>
+            <p>Frete: R$ 30,00</p>
+            <button>Comprar</button>
+
+        </p>
+
+        </div>
+    </main>
+
+   
+
+<script>
+
+</script>
+
+
+    <script src="script.js"></script>
 </body>
 </html>
+ 
+
+<footer class="footer">
+    <p>&copy;Todos os direitos reservados.</p>
+

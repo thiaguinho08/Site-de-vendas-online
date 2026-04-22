@@ -1,49 +1,89 @@
+/* styles.css */
 body {
-  height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
+  margin: 0;
+  font-family: "Chakra Petch", sans-serif;
+  background: linear-gradient(135deg,  red, red);
+  color: red;
 }
 
-.product h4 {
-  margin: 10px 0 5px;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: #101020;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
 }
-
-.product p {
-  color: #2e7d32;
+ 
+.logo {
+  font-size: 24px;
   font-weight: bold;
+  color: #0dcaf0;
 }
 
-button {
-  width: 100%;
-  padding: 10px;
+#search-bar {
+  width: 40%;
+  padding: 8px;
   border: none;
-  border-radius: 8px;
-  background: #ff9900;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #e68a00;
-}
-
-.cart {
-  position: fixed;
-  top: 20px;
-  right: 20px;
+  border-radius: 5px;
+  outline: none;
+  font-size: 16px;
   background: white;
+  color: #101020;
+}
+
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-card {
+  background: black;
+  border-radius: 20px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.product-card img {
+  width: 100%;
+  border-radius: 20px;
+  height: 200px;
+  object-fit: contain;
+}
+
+.product-card h2 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.product-card p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.product-card button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  background: white;
+  color: (#0dcaf0, 82, 241);
+  transition: background 0.3s;
+}
+
+.product-card button:hover {
+  background: white;
+}
+
+.footer {
+  text-align: center;
   padding: 15px;
-  border-radius: 12px;
-  width: 250px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-
-.btn-finalizar {
-  background: #28a745;
-  margin-top: 10px;
-}
-
-.btn-finalizar:hover {
-  background: #218838;
+  background: #101020;
+  font-size: 14px;
+  color: #8f8f8f;
 }
